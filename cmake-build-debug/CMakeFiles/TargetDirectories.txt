@@ -1,0 +1,6 @@
+C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/CMakeFiles/my_executable.dir
+C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/config_parser/CMakeFiles/config_parser.dir
+C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/config_parser/CMakeFiles/edit_cache.dir
+C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/config_parser/CMakeFiles/rebuild_cache.dir
