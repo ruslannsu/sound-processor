@@ -1,0 +1,4 @@
+mute 30 10
+mix 100 300
+mix 30 1
+mute 3 1
