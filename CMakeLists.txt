@@ -3,4 +3,11 @@ project(lab3)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(lab3 src/main.cpp)
+
+add_subdirectory(lib/config_parser)
+
+include_directories(lib/config_parser/include)
+
+add_executable(my_executable src/main.cpp)
+
+target_link_libraries(my_executable config_parser)
