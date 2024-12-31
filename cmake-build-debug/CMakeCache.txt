@@ -243,6 +243,15 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
+WAV_BINARY_DIR:STATIC=C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/WAV
+
+//Value Computed by CMake
+WAV_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+WAV_SOURCE_DIR:STATIC=C:/Users/Руслан/Desktop/OOP_labs/lab3/lib/WAV
+
+//Value Computed by CMake
 config_BINARY_DIR:STATIC=C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/config_parser
 
 //Value Computed by CMake
@@ -268,6 +277,15 @@ lab3_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 lab3_SOURCE_DIR:STATIC=C:/Users/Руслан/Desktop/OOP_labs/lab3
+
+//Value Computed by CMake
+sound_processor_BINARY_DIR:STATIC=C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/sound_processor
+
+//Value Computed by CMake
+sound_processor_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+sound_processor_SOURCE_DIR:STATIC=C:/Users/Руслан/Desktop/OOP_labs/lab3/lib/sound_processor
 
 
 ########################
@@ -372,7 +390,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

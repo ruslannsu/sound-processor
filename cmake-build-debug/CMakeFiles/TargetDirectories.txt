@@ -4,3 +4,9 @@ C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/CMakeFiles/rebuild
 C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/config_parser/CMakeFiles/config_parser.dir
 C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/config_parser/CMakeFiles/edit_cache.dir
 C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/config_parser/CMakeFiles/rebuild_cache.dir
+C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/sound_processor/CMakeFiles/sound_processor.dir
+C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/sound_processor/CMakeFiles/edit_cache.dir
+C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/sound_processor/CMakeFiles/rebuild_cache.dir
+C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/WAV/CMakeFiles/WAV.dir
+C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/WAV/CMakeFiles/edit_cache.dir
+C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/WAV/CMakeFiles/rebuild_cache.dir
