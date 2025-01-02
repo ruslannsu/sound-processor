@@ -1,0 +1,174 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "lib/config_parser",
+					"jsonFile" : "directory-lib.config_parser-Debug-edb0539a6c88da03a069.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "lib/config_parser",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "lib/sound_processor",
+					"jsonFile" : "directory-lib.sound_processor-Debug-e1639c197d8bf68cb6ad.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "lib/sound_processor",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "lib/WAV",
+					"jsonFile" : "directory-lib.WAV-Debug-74b9747dd2277994f22a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "lib/WAV",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "lab3",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "config_parser",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "sound_processor",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "WAV",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 3,
+					"id" : "WAV::@aadc732c3cd2ddb2f34a",
+					"jsonFile" : "target-WAV-Debug-11ed8e8c6a7c1922a1d6.json",
+					"name" : "WAV",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "config_parser::@d9548b9624d3e914fb33",
+					"jsonFile" : "target-config_parser-Debug-2c59ba4b97a6568dbb37.json",
+					"name" : "config_parser",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "my_executable::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-my_executable-Debug-dc75700448dd25030d24.json",
+					"name" : "my_executable",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "sound_processor::@3cb3b1a9eb0ece781249",
+					"jsonFile" : "target-sound_processor-Debug-d65ed68073d0e57e06db.json",
+					"name" : "sound_processor",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/\u0420\u0443\u0441\u043b\u0430\u043d/Desktop/OOP_labs/lab3/cmake-build-debug",
+		"source" : "C:/Users/\u0420\u0443\u0441\u043b\u0430\u043d/Desktop/OOP_labs/lab3"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
