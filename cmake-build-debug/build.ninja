@@ -252,6 +252,13 @@ build lib/WAV/CMakeFiles/WAV.dir/src/WAVExceptions.cpp.obj: CXX_COMPILER__WAV_un
   OBJECT_DIR = lib\WAV\CMakeFiles\WAV.dir
   OBJECT_FILE_DIR = lib\WAV\CMakeFiles\WAV.dir\src
 
+build lib/WAV/CMakeFiles/WAV.dir/src/WAVWriter.cpp.obj: CXX_COMPILER__WAV_unscanned_Debug C$:/Users/Руслан/Desktop/OOP_labs/lab3/lib/WAV/src/WAVWriter.cpp || cmake_object_order_depends_target_WAV
+  DEP_FILE = lib\WAV\CMakeFiles\WAV.dir\src\WAVWriter.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/WAV/include
+  OBJECT_DIR = lib\WAV\CMakeFiles\WAV.dir
+  OBJECT_FILE_DIR = lib\WAV\CMakeFiles\WAV.dir\src
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target WAV
@@ -260,7 +267,7 @@ build lib/WAV/CMakeFiles/WAV.dir/src/WAVExceptions.cpp.obj: CXX_COMPILER__WAV_un
 #############################################
 # Link the static library lib\WAV\libWAV.a
 
-build lib/WAV/libWAV.a: CXX_STATIC_LIBRARY_LINKER__WAV_Debug lib/WAV/CMakeFiles/WAV.dir/src/WAVFile.cpp.obj lib/WAV/CMakeFiles/WAV.dir/src/WAVReader.cpp.obj lib/WAV/CMakeFiles/WAV.dir/src/WAVExceptions.cpp.obj
+build lib/WAV/libWAV.a: CXX_STATIC_LIBRARY_LINKER__WAV_Debug lib/WAV/CMakeFiles/WAV.dir/src/WAVFile.cpp.obj lib/WAV/CMakeFiles/WAV.dir/src/WAVReader.cpp.obj lib/WAV/CMakeFiles/WAV.dir/src/WAVExceptions.cpp.obj lib/WAV/CMakeFiles/WAV.dir/src/WAVWriter.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = lib\WAV\CMakeFiles\WAV.dir
   POST_BUILD = cd .

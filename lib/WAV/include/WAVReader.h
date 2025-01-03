@@ -7,7 +7,7 @@ class WAVReader
 {
 public:
     WAVReader(std::string file);
-private:
+public:
     std::vector<sample> samples_;
     std::vector<char> header_;
 };
