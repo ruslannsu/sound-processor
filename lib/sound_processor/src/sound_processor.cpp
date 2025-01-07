@@ -3,12 +3,12 @@
 
 
 
-SoundProcessor::SoundProcessor(int argc, char *argv[]):config(std::string(argv[2]))
+SoundProcessor::SoundProcessor(int argc, char *argv[]):config_(std::string(argv[2])), output_wav_file_(std::string(argv[3])), input_wav_files_()
 {
-    output_wav_file = std::string(argv[3]);
-    for (size_t i = 4; i != argc; ++i)
+    for (size_t i = 0; i != argc; ++i)
     {
-        input_wav_files.push_back(std::string(argv[i]));
+        input_wav_files_.push_back(WAVReader(std::string(argv[i])));
     }
+
 }
 

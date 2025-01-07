@@ -101,11 +101,11 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "config_parser::@d9548b9624d3e914fb33"
+			"id" : "sound_processor::@3cb3b1a9eb0ece781249"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "sound_processor::@3cb3b1a9eb0ece781249"
+			"id" : "config_parser::@d9548b9624d3e914fb33"
 		},
 		{
 			"backtrace" : 2,

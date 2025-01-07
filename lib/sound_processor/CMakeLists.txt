@@ -4,7 +4,7 @@ project(sound_processor)
 set(CMAKE_CXX_STANDARD 17)
 
 
-include_directories(include ../config_parser/include)
+include_directories(include ../config_parser/include ../WAV/include)
 
 add_library(sound_processor src/sound_processor.cpp)
 

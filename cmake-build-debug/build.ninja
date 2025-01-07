@@ -174,7 +174,7 @@ build cmake_object_order_depends_target_sound_processor: phony || .
 build lib/sound_processor/CMakeFiles/sound_processor.dir/src/sound_processor.cpp.obj: CXX_COMPILER__sound_processor_unscanned_Debug C$:/Users/Руслан/Desktop/OOP_labs/lab3/lib/sound_processor/src/sound_processor.cpp || cmake_object_order_depends_target_sound_processor
   DEP_FILE = lib\sound_processor\CMakeFiles\sound_processor.dir\src\sound_processor.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/sound_processor/include -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/sound_processor/../config_parser/include
+  INCLUDES = -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/sound_processor/include -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/sound_processor/../config_parser/include -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/sound_processor/../WAV/include
   OBJECT_DIR = lib\sound_processor\CMakeFiles\sound_processor.dir
   OBJECT_FILE_DIR = lib\sound_processor\CMakeFiles\sound_processor.dir\src
 

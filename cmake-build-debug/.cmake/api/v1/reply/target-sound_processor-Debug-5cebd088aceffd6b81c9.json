@@ -55,6 +55,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "C:/Users/\u0420\u0443\u0441\u043b\u0430\u043d/Desktop/OOP_labs/lab3/lib/sound_processor/../config_parser/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/Users/\u0420\u0443\u0441\u043b\u0430\u043d/Desktop/OOP_labs/lab3/lib/sound_processor/../WAV/include"
 				}
 			],
 			"language" : "CXX",
