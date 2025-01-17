@@ -10,14 +10,16 @@ add_subdirectory(lib/sound_processor)
 
 add_subdirectory(lib/WAV)
 
+add_subdirectory(lib/converter)
+
 include_directories(lib/config_parser/include)
 
 include_directories(lib/sound_processor/include)
 
 include_directories(lib/WAV/include)
 
-
+include_directories(lib/converter/include)
 
 add_executable(my_executable src/main.cpp)
 
-target_link_libraries(my_executable config_parser sound_processor WAV)
+target_link_libraries(my_executable config_parser sound_processor WAV converter)

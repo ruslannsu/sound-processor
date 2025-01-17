@@ -13,5 +13,4 @@ private:
     std::vector<char> &output_header_;
     std::vector<sample> &output_samples_;
     std::string output_file_path_;
-
 };

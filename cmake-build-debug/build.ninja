@@ -47,12 +47,12 @@ cmake_ninja_workdir = C$:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-d
 #############################################
 # Order-only phony target for my_executable
 
-build cmake_object_order_depends_target_my_executable: phony || cmake_object_order_depends_target_WAV cmake_object_order_depends_target_config_parser cmake_object_order_depends_target_sound_processor
+build cmake_object_order_depends_target_my_executable: phony || cmake_object_order_depends_target_WAV cmake_object_order_depends_target_config_parser cmake_object_order_depends_target_converter cmake_object_order_depends_target_sound_processor
 
 build CMakeFiles/my_executable.dir/src/main.cpp.obj: CXX_COMPILER__my_executable_unscanned_Debug C$:/Users/Руслан/Desktop/OOP_labs/lab3/src/main.cpp || cmake_object_order_depends_target_my_executable
   DEP_FILE = CMakeFiles\my_executable.dir\src\main.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/config_parser/include -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/sound_processor/include -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/WAV/include
+  INCLUDES = -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/config_parser/include -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/sound_processor/include -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/WAV/include -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/converter/include
   OBJECT_DIR = CMakeFiles\my_executable.dir
   OBJECT_FILE_DIR = CMakeFiles\my_executable.dir\src
 
@@ -64,9 +64,9 @@ build CMakeFiles/my_executable.dir/src/main.cpp.obj: CXX_COMPILER__my_executable
 #############################################
 # Link the executable my_executable.exe
 
-build my_executable.exe: CXX_EXECUTABLE_LINKER__my_executable_Debug CMakeFiles/my_executable.dir/src/main.cpp.obj | lib/config_parser/libconfig_parser.a lib/sound_processor/libsound_processor.a lib/WAV/libWAV.a || lib/WAV/libWAV.a lib/config_parser/libconfig_parser.a lib/sound_processor/libsound_processor.a
+build my_executable.exe: CXX_EXECUTABLE_LINKER__my_executable_Debug CMakeFiles/my_executable.dir/src/main.cpp.obj | lib/config_parser/libconfig_parser.a lib/sound_processor/libsound_processor.a lib/WAV/libWAV.a lib/converter/libconverter.a || lib/WAV/libWAV.a lib/config_parser/libconfig_parser.a lib/converter/libconverter.a lib/sound_processor/libsound_processor.a
   FLAGS = -g
-  LINK_LIBRARIES = lib/config_parser/libconfig_parser.a  lib/sound_processor/libsound_processor.a  lib/WAV/libWAV.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = lib/config_parser/libconfig_parser.a  lib/sound_processor/libsound_processor.a  lib/WAV/libWAV.a  lib/converter/libconverter.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\my_executable.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -299,15 +299,86 @@ build lib/WAV/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build lib/WAV/rebuild_cache: phony lib/WAV/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Руслан/Desktop/OOP_labs/lab3/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target converter
+
+
+#############################################
+# Order-only phony target for converter
+
+build cmake_object_order_depends_target_converter: phony || .
+
+build lib/converter/CMakeFiles/converter.dir/src/converter_creator.cpp.obj: CXX_COMPILER__converter_unscanned_Debug C$:/Users/Руслан/Desktop/OOP_labs/lab3/lib/converter/src/converter_creator.cpp || cmake_object_order_depends_target_converter
+  DEP_FILE = lib\converter\CMakeFiles\converter.dir\src\converter_creator.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/converter/include -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/converter/../WAV/include -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/converter/../config_parser/include
+  OBJECT_DIR = lib\converter\CMakeFiles\converter.dir
+  OBJECT_FILE_DIR = lib\converter\CMakeFiles\converter.dir\src
+
+build lib/converter/CMakeFiles/converter.dir/src/converters.cpp.obj: CXX_COMPILER__converter_unscanned_Debug C$:/Users/Руслан/Desktop/OOP_labs/lab3/lib/converter/src/converters.cpp || cmake_object_order_depends_target_converter
+  DEP_FILE = lib\converter\CMakeFiles\converter.dir\src\converters.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/converter/include -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/converter/../WAV/include -IC:/Users/Руслан/Desktop/OOP_labs/lab3/lib/converter/../config_parser/include
+  OBJECT_DIR = lib\converter\CMakeFiles\converter.dir
+  OBJECT_FILE_DIR = lib\converter\CMakeFiles\converter.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target converter
+
+
+#############################################
+# Link the static library lib\converter\libconverter.a
+
+build lib/converter/libconverter.a: CXX_STATIC_LIBRARY_LINKER__converter_Debug lib/converter/CMakeFiles/converter.dir/src/converter_creator.cpp.obj lib/converter/CMakeFiles/converter.dir/src/converters.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = lib\converter\CMakeFiles\converter.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\converter\libconverter.a
+  TARGET_PDB = converter.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build lib/converter/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Руслан\Desktop\OOP_labs\lab3\cmake-build-debug\lib\converter && "C:\Program Files\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build lib/converter/edit_cache: phony lib/converter/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build lib/converter/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Руслан\Desktop\OOP_labs\lab3\cmake-build-debug\lib\converter && "C:\Program Files\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\Руслан\Desktop\OOP_labs\lab3 -BC:\Users\Руслан\Desktop\OOP_labs\lab3\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build lib/converter/rebuild_cache: phony lib/converter/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
 
 build WAV: phony lib/WAV/libWAV.a
 
 build config_parser: phony lib/config_parser/libconfig_parser.a
 
+build converter: phony lib/converter/libconverter.a
+
 build libWAV.a: phony lib/WAV/libWAV.a
 
 build libconfig_parser.a: phony lib/config_parser/libconfig_parser.a
+
+build libconverter.a: phony lib/converter/libconverter.a
 
 build libsound_processor.a: phony lib/sound_processor/libsound_processor.a
 
@@ -323,7 +394,7 @@ build sound_processor: phony lib/sound_processor/libsound_processor.a
 #############################################
 # Folder: C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug
 
-build all: phony my_executable.exe lib/config_parser/all lib/sound_processor/all lib/WAV/all
+build all: phony my_executable.exe lib/config_parser/all lib/sound_processor/all lib/WAV/all lib/converter/all
 
 # =============================================================================
 
@@ -342,6 +413,13 @@ build lib/config_parser/all: phony lib/config_parser/libconfig_parser.a
 # =============================================================================
 
 #############################################
+# Folder: C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/converter
+
+build lib/converter/all: phony lib/converter/libconverter.a
+
+# =============================================================================
+
+#############################################
 # Folder: C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/sound_processor
 
 build lib/sound_processor/all: phony lib/sound_processor/libsound_processor.a
@@ -353,14 +431,14 @@ build lib/sound_processor/all: phony lib/sound_processor/libsound_processor.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Users/Руслан/Desktop/OOP_labs/lab3/CMakeLists.txt C$:/Users/Руслан/Desktop/OOP_labs/lab3/lib/WAV/CMakeLists.txt C$:/Users/Руслан/Desktop/OOP_labs/lab3/lib/config_parser/CMakeLists.txt C$:/Users/Руслан/Desktop/OOP_labs/lab3/lib/sound_processor/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Users/Руслан/Desktop/OOP_labs/lab3/CMakeLists.txt C$:/Users/Руслан/Desktop/OOP_labs/lab3/lib/WAV/CMakeLists.txt C$:/Users/Руслан/Desktop/OOP_labs/lab3/lib/config_parser/CMakeLists.txt C$:/Users/Руслан/Desktop/OOP_labs/lab3/lib/converter/CMakeLists.txt C$:/Users/Руслан/Desktop/OOP_labs/lab3/lib/sound_processor/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Users/Руслан/Desktop/OOP_labs/lab3/CMakeLists.txt C$:/Users/Руслан/Desktop/OOP_labs/lab3/lib/WAV/CMakeLists.txt C$:/Users/Руслан/Desktop/OOP_labs/lab3/lib/config_parser/CMakeLists.txt C$:/Users/Руслан/Desktop/OOP_labs/lab3/lib/sound_processor/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Users/Руслан/Desktop/OOP_labs/lab3/CMakeLists.txt C$:/Users/Руслан/Desktop/OOP_labs/lab3/lib/WAV/CMakeLists.txt C$:/Users/Руслан/Desktop/OOP_labs/lab3/lib/config_parser/CMakeLists.txt C$:/Users/Руслан/Desktop/OOP_labs/lab3/lib/converter/CMakeLists.txt C$:/Users/Руслан/Desktop/OOP_labs/lab3/lib/sound_processor/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeCXXCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake: phony
 
 
 #############################################

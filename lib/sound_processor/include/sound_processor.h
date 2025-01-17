@@ -8,9 +8,9 @@ class SoundProcessor
 {
 public:
     SoundProcessor(int argc, char *argv[]);
-
+    void Run();
 private:
-    std::vector<WAVReader> input_wav_files_;
+    std::vector<std::vector<sample>> input_samples_;
     std::string output_wav_file_;
     Config config_;
 };

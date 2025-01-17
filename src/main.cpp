@@ -3,12 +3,12 @@
 #include <iostream>
 #include <WAVreader.h>
 #include <WAVWriter.h>
-
+#include <converters.h>
+#include <converter_creator.h>
 int main()
 {
-    Config conf("../config/config1.txt");
 
-    //WAVReader W("../config/severe_tire_damage.wav");
-  //  WAVWriter wr(W.samples_, W.header_, std::string("../config/write_checker.wav"));
-   // wr.WriteToFile();
+
+
+
 }

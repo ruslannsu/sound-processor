@@ -26,14 +26,20 @@ Config::Config(std::string path)
                     }
                     else
                     {
-
-                        line.parameters_.push_back(stoi(buffer.substr(string_pos, i + 1)));
-                        string_pos = i;
+                        if (buffer.substr(string_pos, i + 1).at(0) == '$')
+                        {
+                            line.streams_.push_back(stoi(buffer.substr(string_pos + 1, i + 1)));
+                            string_pos = i + 1;
+                        }
+                        else
+                        {
+                            line.parameters_.push_back(stoi(buffer.substr(string_pos, i + 1)));
+                            string_pos = i + 1;
+                        }
                     }
                 }
             }
             config_.push_back(line);
-
         }
     }
     else
@@ -47,6 +53,10 @@ Config::Config(std::string path)
         for (size_t j = 0; j != config_.at(i).parameters_.size(); ++j)
         {
             std::cout << config_.at(i).parameters_.at(j) << ' ';
+        }
+        for (size_t j = 0; j != config_.at(i).streams_.size(); ++j)
+        {
+            std::cout << config_.at(i).streams_.at(j) << ' ';
         }
         std::cout << std::endl;
     }

@@ -10,3 +10,6 @@ C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/sound_processo
 C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/WAV/CMakeFiles/WAV.dir
 C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/WAV/CMakeFiles/edit_cache.dir
 C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/WAV/CMakeFiles/rebuild_cache.dir
+C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/converter/CMakeFiles/converter.dir
+C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/converter/CMakeFiles/edit_cache.dir
+C:/Users/Руслан/Desktop/OOP_labs/lab3/cmake-build-debug/lib/converter/CMakeFiles/rebuild_cache.dir
