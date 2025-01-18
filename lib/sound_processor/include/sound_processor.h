@@ -11,6 +11,7 @@ class SoundProcessor
 {
 public:
     SoundProcessor(int argc, char *argv[]);
+    void Info();
     void Run();
 private:
     std::vector<char> input_header_;

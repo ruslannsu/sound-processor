@@ -3,6 +3,23 @@
 #include "map"
 
 
+
+void SoundProcessor::Info()
+{
+    std::cout << "Mute Converter mutes the sound over a specified time range. "
+                 "It is used with the command [mute a b] in the configuration file line,"
+                 "where a and b are the start and end points of the mute." << std::endl;
+    std::cout << "Mix Converter mixes two main audio streams with an external one"
+                 " from a specific second until the end of the main stream. "
+                 "It uses the command mix $a b, "
+                 "where $a refers to the stream (corresponding to the file number), "
+                 "and b is the second from which to start mixing" << std::endl;
+    std::cout << "RandomBoost Converter multiplies the value of each sample by a random"
+                 " number from a specified range. It is used with the command rboost a b, "
+                 "where a and b define the range.";
+
+}
+
 SoundProcessor::SoundProcessor(int argc, char *argv[]):output_wav_file_(argv[2]), config_(argv[1])
 {
     if (argc < 4)
@@ -23,7 +40,6 @@ void SoundProcessor::Run()
 {
     std::vector<ConfigLine> config = config_.GetConfig();
     std::vector<sample> current_sample_stream = input_samples_.at(0);
-    std::cout << config.size() << std::endl;
     if (config.size() == 0)
     {
         throw std::invalid_argument("Empty config");
