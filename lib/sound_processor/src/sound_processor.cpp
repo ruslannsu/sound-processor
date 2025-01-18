@@ -21,7 +21,6 @@ SoundProcessor::SoundProcessor(int argc, char *argv[]):output_wav_file_(argv[2])
 
 void SoundProcessor::Run()
 {
-
     std::vector<ConfigLine> config = config_.GetConfig();
     std::vector<sample> current_sample_stream = input_samples_.at(0);
     std::cout << config.size() << std::endl;

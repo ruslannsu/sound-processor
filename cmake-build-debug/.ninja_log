@@ -27,3 +27,7 @@
 2377	2524	7589188997162314	lib/converter/libconverter.a	d2b8f7fe3aa3ab67
 1415	2862	7589188987536849	CMakeFiles/my_executable.dir/src/main.cpp.obj	c7e291c4bf00677e
 2862	3136	7589189002009482	my_executable.exe	6087a5dd7fa5929d
+22	3159	7589204912578889	CMakeFiles/my_executable.dir/src/main.cpp.obj	c7e291c4bf00677e
+14	3650	7589204912498562	lib/sound_processor/CMakeFiles/sound_processor.dir/src/sound_processor.cpp.obj	b1c16830fa3e726
+3650	3854	7589204948717852	lib/sound_processor/libsound_processor.a	9eca4ab9bc46a2f9
+3854	4328	7589204950748589	my_executable.exe	6087a5dd7fa5929d
