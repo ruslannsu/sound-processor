@@ -46,20 +46,13 @@ Config::Config(std::string path)
     {
         throw std::invalid_argument("Incorrect path");
     }
-    for (size_t i = 0; i != config_.size(); ++i)
-    {
-        std::cout << config_.at(i).converter_name_ << ' ';
-
-        for (size_t j = 0; j != config_.at(i).parameters_.size(); ++j)
-        {
-            std::cout << config_.at(i).parameters_.at(j) << ' ';
-        }
-        for (size_t j = 0; j != config_.at(i).streams_.size(); ++j)
-        {
-            std::cout << config_.at(i).streams_.at(j) << ' ';
-        }
-        std::cout << std::endl;
-    }
 }
+
+
+std::vector<ConfigLine>& Config::GetConfig()
+{
+    return config_;
+}
+
 
 

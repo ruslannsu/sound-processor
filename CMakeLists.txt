@@ -22,4 +22,4 @@ include_directories(lib/converter/include)
 
 add_executable(my_executable src/main.cpp)
 
-target_link_libraries(my_executable config_parser sound_processor WAV converter)
+target_link_libraries(my_executable sound_processor config_parser WAV converter)

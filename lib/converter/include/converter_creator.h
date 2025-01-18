@@ -24,3 +24,9 @@ class MixConverterCreator : ConverterCreator
 public:
     std::unique_ptr<Converter> Create(ConfigLine config_line) override;
 };
+
+class RandomBoostConverterCreator : ConverterCreator
+{
+public:
+    std::unique_ptr<Converter> Create(ConfigLine config_line) override;
+};

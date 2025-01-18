@@ -25,7 +25,6 @@ static void FindChunk(std::ifstream &ifs, uint32_t chunk_ID)
         ifs.read((char*)&buffer_struct, sizeof(buffer_struct));
         if (buffer_struct.chunk_ID_ == chunk_ID)
         {
-            std::cout << buffer_struct.size_ << std::endl;
             break;
         }
         ifs.seekg(buffer_struct.size_, std::ios::cur);
@@ -58,7 +57,12 @@ static void ReadHeader(std::ifstream &ifs)
 
 WAVReader::WAVReader(std::string file): samples_(1, 0), header_(1, 0)
 {
+    std::cout << file << std::endl;
     std::ifstream ifs = std::ifstream(file, std::ios::in | std::ios::binary);
+    if (ifs.is_open())
+    {
+        std::cout << "has opened" << std::endl;
+    }
     ReadHeader(ifs);
     size_t header_size = ifs.tellg();
     header_.resize(header_size, 0);

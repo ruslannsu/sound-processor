@@ -5,7 +5,6 @@
 
 
 
-
 struct ConfigLine
 {
     std::string converter_name_;
@@ -17,6 +16,7 @@ class Config
 {
 public:
     Config(std::string path);
+    std::vector<ConfigLine> &GetConfig();
 private:
     std::vector<ConfigLine> config_;
 };
