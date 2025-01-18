@@ -1,8 +1,5 @@
 #include "sound_processor.h"
-
 #include <WAVWriter.h>
-
-
 #include "map"
 
 

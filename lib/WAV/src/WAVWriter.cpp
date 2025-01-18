@@ -1,6 +1,5 @@
 #include <WAVWriter.h>
 #include <fstream>
-#include <utility>
 
 WAVWriter::WAVWriter(std::vector<sample> &samples, std::vector<char> &header, std::string output_file_path):output_header_(header), output_samples_(samples), output_file_path_(output_file_path){}
 

@@ -1,0 +1,4 @@
+mix $2 5
+mix $2 10
+mix $3 30
+rboost 1 7

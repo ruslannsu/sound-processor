@@ -1,6 +1,5 @@
 #pragma once
 #include <WAVfile.h>
-
 #include <string>
 #include <vector>
 

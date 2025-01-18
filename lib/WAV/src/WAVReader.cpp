@@ -1,9 +1,7 @@
 #include <WAVreader.h>
-#include <iostream>
 #include <algorithm>
-
 #include <fstream>
-#include <array>
+
 
 
 std::vector<sample> &WAVReader::GetSamples()
