@@ -6,7 +6,9 @@
 
 class ConverterCreator
 {
+public:
     virtual std::unique_ptr<Converter> Create(ConfigLine config_line) = 0;
+    virtual ~ConverterCreator() = default;
 };
 
 

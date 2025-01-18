@@ -40,3 +40,9 @@
 27	1348	7589212321790706	lib/sound_processor/CMakeFiles/sound_processor.dir/src/sound_processor.cpp.obj	b1c16830fa3e726
 1349	1482	7589212335005424	lib/sound_processor/libsound_processor.a	9eca4ab9bc46a2f9
 1482	1766	7589212336340786	my_executable.exe	6087a5dd7fa5929d
+21	2258	7589445583224310	CMakeFiles/my_executable.dir/src/main.cpp.obj	c7e291c4bf00677e
+17	2312	7589445583184411	lib/converter/CMakeFiles/converter.dir/src/converter_creator.cpp.obj	502658ca10681b69
+2312	2514	7589445606121842	lib/converter/libconverter.a	d2b8f7fe3aa3ab67
+12	2560	7589445583123987	lib/sound_processor/CMakeFiles/sound_processor.dir/src/sound_processor.cpp.obj	b1c16830fa3e726
+2560	2683	7589445608609045	lib/sound_processor/libsound_processor.a	9eca4ab9bc46a2f9
+2683	2997	7589445609846173	my_executable.exe	6087a5dd7fa5929d
