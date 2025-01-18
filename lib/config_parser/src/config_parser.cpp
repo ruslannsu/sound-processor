@@ -8,7 +8,6 @@ Config::Config(std::string path)
     std::string buffer;
     if (file.is_open())
     {
-        std::cout << "file has opened" << std::endl;
         while(getline(file, buffer))
         {
             ConfigLine line{};
@@ -26,15 +25,22 @@ Config::Config(std::string path)
                     }
                     else
                     {
-                        if (buffer.substr(string_pos, i + 1).at(0) == '$')
+                        try
                         {
-                            line.streams_.push_back(stoi(buffer.substr(string_pos + 1, i + 1)));
-                            string_pos = i + 1;
+                            if (buffer.substr(string_pos, i + 1).at(0) == '$')
+                            {
+                                line.streams_.push_back(stoi(buffer.substr(string_pos + 1, i + 1)));
+                                string_pos = i + 1;
+                            }
+                            else
+                            {
+                                line.parameters_.push_back(stoi(buffer.substr(string_pos, i + 1)));
+                                string_pos = i + 1;
+                            }
                         }
-                        else
+                        catch (std::invalid_argument&)
                         {
-                            line.parameters_.push_back(stoi(buffer.substr(string_pos, i + 1)));
-                            string_pos = i + 1;
+                            throw std::invalid_argument("Bad config line");
                         }
                     }
                 }
@@ -44,7 +50,7 @@ Config::Config(std::string path)
     }
     else
     {
-        throw std::invalid_argument("Incorrect path");
+        throw std::invalid_argument("Incorrect path(config file)");
     }
 }
 

@@ -6,5 +6,5 @@ set(CMAKE_CXX_STANDARD 17)
 
 include_directories(include)
 
-add_library(WAV src/WAVFile.cpp src/WAVReader.cpp src/WAVExceptions.cpp src/WAVWriter.cpp)
+add_library(WAV src/WAVFile.cpp src/WAVReader.cpp src/WAVWriter.cpp)
 

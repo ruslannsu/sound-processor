@@ -8,6 +8,10 @@
 
 SoundProcessor::SoundProcessor(int argc, char *argv[]):output_wav_file_(argv[2]), config_(argv[1])
 {
+    if (argc < 4)
+    {
+        throw std::invalid_argument("Bad run arguments");
+    }
     input_header_ = WAVReader(argv[3]).GetHeader();
     input_samples_.resize(argc - 3);
 
@@ -15,8 +19,6 @@ SoundProcessor::SoundProcessor(int argc, char *argv[]):output_wav_file_(argv[2])
     {
         input_samples_.at(i - 3) = WAVReader(argv[i]).GetSamples();
     }
-
-
 }
 
 
@@ -26,6 +28,10 @@ void SoundProcessor::Run()
     std::vector<ConfigLine> config = config_.GetConfig();
     std::vector<sample> current_sample_stream = input_samples_.at(0);
     std::cout << config.size() << std::endl;
+    if (config.size() == 0)
+    {
+        throw std::invalid_argument("Empty config");
+    }
     for (size_t i = 0; i != config.size(); ++i)
     {
         if (config.at(i).converter_name_ == "mute")

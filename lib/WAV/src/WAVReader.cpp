@@ -29,7 +29,6 @@ static void FindChunk(std::ifstream &ifs, uint32_t chunk_ID)
         }
         ifs.seekg(buffer_struct.size_, std::ios::cur);
     }
-
 }
 
 
@@ -39,13 +38,13 @@ static void ReadHeader(std::ifstream &ifs)
     ifs.read((char*)&buffer_riff_struct, sizeof(buffer_riff_struct));
     if (buffer_riff_struct.chunk_ID_ != RIFF)
     {
-        std::cout << "no riff" << std::endl;;
+        throw std::invalid_argument("Bad header: bad RIFF");
     }
     format_size format_buffer;
     ifs.read((char*)&format_buffer, sizeof(format_buffer));
     if (format_buffer != WAVE)
     {
-        std::cout << "no fmt" << std::endl;
+        throw std::invalid_argument("Bad header: bad WAVE");
     }
     FindChunk(ifs, FMT);
     FMTChunkData buffer_fmt_struct{};
@@ -57,12 +56,7 @@ static void ReadHeader(std::ifstream &ifs)
 
 WAVReader::WAVReader(std::string file): samples_(1, 0), header_(1, 0)
 {
-    std::cout << file << std::endl;
     std::ifstream ifs = std::ifstream(file, std::ios::in | std::ios::binary);
-    if (ifs.is_open())
-    {
-        std::cout << "has opened" << std::endl;
-    }
     ReadHeader(ifs);
     size_t header_size = ifs.tellg();
     header_.resize(header_size, 0);

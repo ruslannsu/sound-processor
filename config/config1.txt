@@ -1,3 +1,4 @@
-mute 10 20
-mix $2 20
-mix $3 40
+mute 20 30
+mix $2 35
+mix $3 50
+mix $1 60
