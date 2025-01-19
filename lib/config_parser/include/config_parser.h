@@ -3,8 +3,6 @@
 #include <vector>
 #include <fstream>
 
-
-
 struct ConfigLine
 {
     std::string converter_name_;

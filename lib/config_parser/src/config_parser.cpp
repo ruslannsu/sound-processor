@@ -1,6 +1,5 @@
-#include "config_parser.h"
 #include <iostream>
-
+#include "config_parser.h"
 
 Config::Config(std::string path)
 {
@@ -53,7 +52,6 @@ Config::Config(std::string path)
         throw std::invalid_argument("Incorrect path(config file)");
     }
 }
-
 
 std::vector<ConfigLine>& Config::GetConfig()
 {

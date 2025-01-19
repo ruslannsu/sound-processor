@@ -1,8 +1,5 @@
 #include "sound_processor.h"
-#include <WAVWriter.h>
-#include "map"
-
-
+#include "WAVWriter.h"
 
 void SoundProcessor::Info()
 {
@@ -34,7 +31,6 @@ SoundProcessor::SoundProcessor(int argc, char *argv[]):output_wav_file_(argv[2])
         input_samples_.at(i - 3) = WAVReader(argv[i]).GetSamples();
     }
 }
-
 
 void SoundProcessor::Run()
 {

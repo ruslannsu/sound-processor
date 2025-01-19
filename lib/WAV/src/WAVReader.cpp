@@ -1,8 +1,6 @@
-#include <WAVreader.h>
 #include <algorithm>
 #include <fstream>
-
-
+#include "WAVreader.h"
 
 std::vector<sample> &WAVReader::GetSamples()
 {
@@ -13,7 +11,6 @@ std::vector<char> &WAVReader::GetHeader()
 {
     return header_;
 }
-
 
 static void FindChunk(std::ifstream &ifs, uint32_t chunk_ID)
 {
@@ -28,7 +25,6 @@ static void FindChunk(std::ifstream &ifs, uint32_t chunk_ID)
         ifs.seekg(buffer_struct.size_, std::ios::cur);
     }
 }
-
 
 static void ReadHeader(std::ifstream &ifs)
 {
@@ -49,8 +45,6 @@ static void ReadHeader(std::ifstream &ifs)
     ifs.read((char*)&buffer_fmt_struct, sizeof(buffer_fmt_struct));
     FindChunk(ifs, DATA);
 }
-
-
 
 WAVReader::WAVReader(std::string file): samples_(1, 0), header_(1, 0)
 {

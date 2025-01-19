@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
-#include "WAVfile.h"
 #include <fstream>
+#include "WAVfile.h"
 
 class WAVReader
 {

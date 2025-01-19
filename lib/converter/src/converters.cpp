@@ -1,6 +1,5 @@
 #include "converters.h"
 
-
 MuteConverter::MuteConverter(ConfigLine config_line):first_sec_(config_line.parameters_.at(0)), last_sec_(config_line.parameters_.at(1)){}
 
 void MuteConverter::Convert(std::vector<sample> &samples, std::vector <std::vector<sample>> &other_samples)
@@ -22,11 +21,7 @@ void MuteConverter::Convert(std::vector<sample> &samples, std::vector <std::vect
     }
 }
 
-
-MixConverter::MixConverter(ConfigLine config_line):start_sec_(config_line.parameters_.at(0)), file_link_(config_line.streams_.at(0))
-{}
-
-
+MixConverter::MixConverter(ConfigLine config_line):start_sec_(config_line.parameters_.at(0)), file_link_(config_line.streams_.at(0)){}
 
 void MixConverter::Convert(std::vector<sample> &samples, std::vector <std::vector<sample>> &other_samples)
 {

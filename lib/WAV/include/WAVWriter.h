@@ -1,7 +1,7 @@
 #pragma once
-#include <WAVfile.h>
 #include <string>
 #include <vector>
+#include "WAVfile.h"
 
 class WAVWriter
 {

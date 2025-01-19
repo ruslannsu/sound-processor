@@ -1,9 +1,9 @@
 #pragma once
-#include "config_parser.h"
 #include <vector>
 #include <string>
-#include <WAVReader.h>
-#include <WAVWriter.h>
+#include "WAVReader.h"
+#include "WAVWriter.h"
+#include "config_parser.h"
 #include "converters.h"
 #include "converter_creator.h"
 
